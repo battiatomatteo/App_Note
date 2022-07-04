@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'navbar.dart';
-import 'package:testvscode/salvataggio.java';
+import 'LogIn.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +14,8 @@ class MyApp extends StatelessWidget {
       title: _title,
       debugShowCheckedModeBanner:
           false, //per nascondere la scritta debug in alto a destra
-      home: MyStatefulWidget(),
+      home: Login(),
+      
     );
   }
 }
