@@ -12,8 +12,10 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 50, fontWeight: FontWeight.bold,color: Color.fromARGB(192, 20, 2, 44));
+  static const TextStyle optionStyle = TextStyle(
+      fontSize: 50,
+      fontWeight: FontWeight.bold,
+      color: Color.fromARGB(192, 20, 2, 44));
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Home',
@@ -26,7 +28,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       style: optionStyle,
     ),
   ];
-  
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -37,9 +39,41 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Prova '),
+        centerTitle: true,
+        titleSpacing: 0,
+        toolbarHeight: 60,
+        title: Stack(
+          children: [
+            Positioned(
+              child: const Text(
+                '         Boat Note            ',
+                style: TextStyle(
+                  fontSize: 30,
+                ),
+              ),
+            ),
+            Positioned(
+                right: 0,
+                top: 0,
+                width: 35,
+                height: 35,
+                child: FloatingActionButton(
+                  onPressed: () => {},
+                  child: Icon(Icons.search),
+                  backgroundColor: Color.fromARGB(255, 209, 56, 236),
+                )),
+          ],
+        ),
         backgroundColor: Color.fromARGB(255, 209, 56, 236),
+        /*const Text('Boat Note'),
+          centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 209, 56, 236),
+          child :FloatingActionButton(
+            onPressed: () => {},
+            child: Icon(Icons.search),
+            )*/
       ),
+
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -57,7 +91,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.note),
-            backgroundColor:Color.fromARGB(255, 209, 56, 236),
+            backgroundColor: Color.fromARGB(255, 209, 56, 236),
             label: 'Notes',
           ),
           BottomNavigationBarItem(
@@ -67,11 +101,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor:  Color.fromARGB(255, 245, 244, 247),
+        selectedItemColor: Color.fromARGB(255, 245, 244, 247),
         onTap: _onItemTapped,
       ),
-        //backgroundColor: Color.fromARGB(255, 97, 96, 96),   //sfondo delle facciate
-     );
+      //backgroundColor: Color.fromARGB(255, 97, 96, 96),   //sfondo delle facciate
+    );
   }
 }
 //style: TextStyle(fontSize: 20),
+//icone
+//https://api.flutter.dev/flutter/material/Icons-class.html

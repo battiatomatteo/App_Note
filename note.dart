@@ -26,12 +26,15 @@ class _NoteState extends State<Note> {
             bottom: 20,
             child: FloatingActionButton(
               backgroundColor: Color.fromARGB(255, 209, 56, 236),
-              onPressed: () => Foglionote(context), //Foglionote(),
+              //collegamento al foglio delle note
+              onPressed: () =>{ Navigator.push(context, MaterialPageRoute(builder: (_) => Foglionote(context))),
+                }, //Foglionote(),
               child: Icon(Icons.plus_one_rounded),
             ),
           )
         ],
-      )),
+      ),
+      )
     );
   }
   
