@@ -46,7 +46,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           children: [
             Positioned(
               child: const Text(
-                '         Boat Note            ',
+                '         Boat Note               ',
                 style: TextStyle(
                   fontSize: 30,
                 ),

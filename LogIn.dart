@@ -42,7 +42,7 @@ class _Login extends State<Login> {
               child: TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Email',
+                    labelText: 'Email/Username',
                     hintText: 'Enter valid email id as abc@gmail.com'),
               ),
             ),
@@ -50,8 +50,7 @@ class _Login extends State<Login> {
               padding: const EdgeInsets.only(
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
-
-                obscureText: true,
+                obscureText: true,//rende non leggibile la password dopo aver scritto un carattere
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
@@ -61,7 +60,6 @@ class _Login extends State<Login> {
             FlatButton(
               onPressed: (){
                 //evento quando si clicca 'forgot password'
-                
               },
               child: Text(
                 'Forgot Password',
@@ -90,7 +88,7 @@ class _Login extends State<Login> {
             ),
             //collegamento alla pagina web di registrazion
             GestureDetector(
-                child: Text("New User? Create Account", style: TextStyle(decoration: TextDecoration.underline, color: Colors.blue)),
+                child: Text("Accedi al nostro sito web", style: TextStyle(decoration: TextDecoration.underline, color: Colors.blue)),
                 onTap: () async {
                   const url = 'https://github.com/';
                   if (await canLaunch(url)) launch(url);
@@ -102,3 +100,6 @@ class _Login extends State<Login> {
     );
   }
 }
+
+
+//New User? Create Account

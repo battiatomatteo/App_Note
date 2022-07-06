@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:
           false, //per nascondere la scritta debug in alto a destra
       home: Login(),
-      
     );
   }
 }
