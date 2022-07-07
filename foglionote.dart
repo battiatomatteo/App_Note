@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 class Foglionote extends StatefulWidget {
   const Foglionote(BuildContext context, {Key? key}) : super(key: key);
-  
+
   @override
   State<Foglionote> createState() => _Foglionote();
 }
@@ -11,6 +10,8 @@ class Foglionote extends StatefulWidget {
 class _Foglionote extends State<Foglionote> {
   @override
   Widget build(BuildContext context) {
+    double height2 = MediaQuery.of(context).size.height;
+    int nrighe = ( (height2 - 220) / 20) as int;
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
@@ -32,7 +33,8 @@ class _Foglionote extends State<Foglionote> {
               backgroundColor: Color.fromARGB(255, 209, 56, 236),
               //bottone salvataggio
               /*onPressed: () =>{ Navigator.push(context, MaterialPageRoute(builder: (_) => )),}, //Foglionote(),*/
-              onPressed: () {}, //si toglie quando si inizia a guardare la parte di salvatggio e si usa il codice in linea 34-35
+              onPressed:
+                  () {}, //si toglie quando si inizia a guardare la parte di salvatggio e si usa il codice in linea 34-35
               child: Icon(Icons.save),
             ),
           )
@@ -47,7 +49,7 @@ class _Foglionote extends State<Foglionote> {
             Card(
                 color: Colors.white,
                 child: Padding(
-                  padding: EdgeInsets.all(25.0),
+                  padding: EdgeInsets.all(25),
                   child: TextField(
                     style: TextStyle(fontSize: 30),
                     maxLines: 1,
@@ -59,12 +61,11 @@ class _Foglionote extends State<Foglionote> {
             Card(
                 color: Colors.white,
                 child: Padding(
-                  padding: EdgeInsets.all(80),
+                  padding: const EdgeInsets.all(25),
                   child: TextField(
-                  
                     style: TextStyle(fontSize: 20),
-                    minLines: 10, 
-                    maxLines: 100,//or null
+                    minLines: ((height2 - 220) ~/ 20),
+                    maxLines: 110, //or null
                     decoration: InputDecoration.collapsed(
                         hintText: "Enter your text here;   line max 10"),
                   ),
