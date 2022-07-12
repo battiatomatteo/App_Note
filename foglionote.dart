@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Foglionote extends StatefulWidget {
@@ -11,7 +13,7 @@ class _Foglionote extends State<Foglionote> {
   @override
   Widget build(BuildContext context) {
     double height2 = MediaQuery.of(context).size.height;
-    int nrighe = ( (height2 - 220) / 20) as int;
+    int rows = ((height2.toInt() - 210) ~/ 25);
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
@@ -22,6 +24,7 @@ class _Foglionote extends State<Foglionote> {
               '         Boat Note               ',
               style: TextStyle(
                 fontSize: 30,
+                
               ),
             ),
           ),
@@ -40,6 +43,7 @@ class _Foglionote extends State<Foglionote> {
           )
         ]),
         centerTitle: true,
+        
         backgroundColor: Color.fromARGB(255, 209, 56, 236),
       ),
       body: Center(
@@ -64,8 +68,8 @@ class _Foglionote extends State<Foglionote> {
                   padding: const EdgeInsets.all(25),
                   child: TextField(
                     style: TextStyle(fontSize: 20),
-                    minLines: ((height2 - 220) ~/ 20),
-                    maxLines: 110, //or null
+                    minLines: rows,
+                    maxLines: rows, //or null
                     decoration: InputDecoration.collapsed(
                         hintText: "Enter your text here;   line max 10"),
                   ),

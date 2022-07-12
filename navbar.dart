@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:testvscode/calendar.dart';
 import 'package:testvscode/note.dart';
+import 'package:testvscode/settings.dart';
 
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -23,10 +24,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     ),
     Home(),
     Note(),
-    Text(
-      'Settings',
-      style: optionStyle,
-    ),
   ];
 
   void _onItemTapped(int index) {
@@ -46,7 +43,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           children: [
             Positioned(
               child: const Text(
-                '         Boat Note               ',
+                '          Boat Note               ',
                 style: TextStyle(
                   fontSize: 30,
                 ),
@@ -58,20 +55,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 width: 35,
                 height: 35,
                 child: FloatingActionButton(
-                  onPressed: () => {},
-                  child: Icon(Icons.search),
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: (_) => Sett()));
+                  },
+                  child: Icon(Icons.account_box), //icona della lente:Icons.search
                   backgroundColor: Color.fromARGB(255, 209, 56, 236),
                 )),
           ],
         ),
         backgroundColor: Color.fromARGB(255, 209, 56, 236),
-        /*const Text('Boat Note'),
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 209, 56, 236),
-          child :FloatingActionButton(
-            onPressed: () => {},
-            child: Icon(Icons.search),
-            )*/
       ),
 
       body: Center(
@@ -81,28 +74,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            backgroundColor: Color.fromARGB(255, 209, 56, 236),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month),
-            backgroundColor: Color.fromARGB(255, 209, 56, 236),
             label: 'Calendar',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.note),
-            backgroundColor: Color.fromARGB(255, 209, 56, 236),
             label: 'Notes',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            backgroundColor: Color.fromARGB(255, 209, 56, 236),
-            label: 'setting',
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Color.fromARGB(255, 245, 244, 247),
+        unselectedItemColor: Color.fromARGB(255, 245, 244, 247),
         onTap: _onItemTapped,
+        backgroundColor: Color.fromARGB(255, 209, 56, 236),
       ),
       //backgroundColor: Color.fromARGB(255, 97, 96, 96),   //sfondo delle facciate
     );
