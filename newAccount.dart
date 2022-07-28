@@ -1,21 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'navbar.dart';
-import 'newAccount.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+
+import 'package:flutter/material.dart';
+import 'navbar.dart';
+
+class NewAc extends StatefulWidget {
+  const NewAc({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _Login();
+  State<NewAc> createState() => _NewAc();
 }
 
-class _Login extends State<Login> {
+class _NewAc extends State<NewAc> {
   @override
   Widget build(BuildContext context) {
-    //double width = MediaQuery.of(context).size.width;
     double height2 = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -35,24 +34,28 @@ class _Login extends State<Login> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 10),
-              child: Center(
-                child: Container(
-                  width: 150,
-                  height: 150,
-                  //https://www.html.it/pag/379719/gestione-degli-assets-e-delle-immagini/
-                    alignment: Alignment.center,
-                    child:
-                     const Image(image: AssetImage('assets/img/1024.png')),
-                ),
-              ),
-            ),
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+              /*child:LabelElement(
+                labelText:'Crea qui il tuo account',
+              )*/),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Email/Username',
+                    labelText: 'Username',
+                    hintText: 'Enter valid Username'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+              child: TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
                     hintText: 'Enter valid email id as abc@gmail.com'),
               ),
             ),
@@ -68,25 +71,16 @@ class _Login extends State<Login> {
                     hintText: 'Enter secure password'),
               ),
             ),
-            FlatButton(
-              onPressed: () {
-                //evento quando si clicca 'forgot password'
-              },
-              child: Text(
-                'Forgot Password',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 209, 56, 236), fontSize: 15),
-              ),
-            ),
-            FlatButton(
-              onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (_) => NewAc()));
-                },
-              child: Text(
-                'New Account',
-                style: TextStyle(
-                    color: Color.fromARGB(255, 209, 56, 236), fontSize: 15),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 30),
+              child: TextField(
+                obscureText:
+                    true, //rende non leggibile la password dopo aver scritto un carattere
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Conferma Password',
+                    hintText: 'Confermare la password'),
               ),
             ),
             Container(
@@ -107,25 +101,11 @@ class _Login extends State<Login> {
               ),
             ),
             SizedBox(
-              height: height2 - 580,
+              height: height2 - 570,
             ),
-            //collegamento alla pagina web di registrazion
-            GestureDetector(
-              child: Text("Accedi al nostro sito web",
-                  style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: Colors.blue)),
-              onTap: () async {
-                const url = 'https://github.com/';
-                if (await canLaunch(url)) launch(url);
-              },
-            )
           ],
         ),
       ),
     );
   }
 }
-
-
-//New User? Create Account
