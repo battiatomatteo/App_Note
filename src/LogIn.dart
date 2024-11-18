@@ -116,7 +116,7 @@ class _Login extends State<Login> {
                       decoration: TextDecoration.underline,
                       color: Colors.blue)),
               onTap: () async {
-                const url = 'https://github.com/';
+                const url = 'https://github.com/';  //* link al sito web dell'app
                 if (await canLaunch(url)) launch(url);
               },
             )
