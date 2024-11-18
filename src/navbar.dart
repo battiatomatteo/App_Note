@@ -1,4 +1,5 @@
-// ignore_for_file: prefer_const_constructors
+//! ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:testvscode/calendar.dart';
 import 'package:testvscode/note.dart';
@@ -59,7 +60,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Navigator.push(
                         context, MaterialPageRoute(builder: (_) => Sett()));
                   },
-                  child: Icon(Icons.account_box), //icona della lente:Icons.search
+                  child: Icon(Icons.account_box), //* icona della lente:Icons.search
                   backgroundColor: Color.fromARGB(255, 209, 56, 236),
                 )),
           ],
@@ -91,10 +92,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         onTap: _onItemTapped,
         backgroundColor: Color.fromARGB(255, 209, 56, 236),
       ),
-      //backgroundColor: Color.fromARGB(255, 97, 96, 96),   //sfondo delle facciate
+      //* backgroundColor: Color.fromARGB(255, 97, 96, 96),   //sfondo delle facciate
     );
   }
 }
-//style: TextStyle(fontSize: 20),
-//icone
-//https://api.flutter.dev/flutter/material/Icons-class.html
+/*
+   * style: TextStyle(fontSize: 20),
+   * icone
+   ? https://api.flutter.dev/flutter/material/Icons-class.html
+*/    

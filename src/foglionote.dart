@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+//! ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -34,10 +34,10 @@ class _Foglionote extends State<Foglionote> {
             height: 35,
             child: FloatingActionButton(
               backgroundColor: Color.fromARGB(255, 209, 56, 236),
-              //bottone salvataggio
+              //* bottone salvataggio
               /*onPressed: () =>{ Navigator.push(context, MaterialPageRoute(builder: (_) => )),}, //Foglionote(),*/
               onPressed:
-                  () {}, //si toglie quando si inizia a guardare la parte di salvatggio e si usa il codice in linea 34-35
+                  () {}, //* si toglie quando si inizia a guardare la parte di salvatggio e si usa il codice in linea 34-35
               child: Icon(Icons.save),
             ),
           )
@@ -49,7 +49,7 @@ class _Foglionote extends State<Foglionote> {
       body: Center(
         child: Column(
           children: <Widget>[
-            //titolo
+            //! titolo
             Card(
                 color: Colors.white,
                 child: Padding(
@@ -61,7 +61,7 @@ class _Foglionote extends State<Foglionote> {
                         hintText: "Enter your title here"),
                   ),
                 )),
-            //testo
+            //! testo
             Card(
                 color: Colors.white,
                 child: Padding(
@@ -69,7 +69,7 @@ class _Foglionote extends State<Foglionote> {
                   child: TextField(
                     style: TextStyle(fontSize: 20),
                     minLines: rows,
-                    maxLines: rows, //or null
+                    maxLines: rows, //* or null
                     decoration: InputDecoration.collapsed(
                         hintText: "Enter your text here;   line max 10"),
                   ),

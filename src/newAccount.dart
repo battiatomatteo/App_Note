@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+//! ignore_for_file: prefer_const_constructors
 
 
 import 'package:flutter/material.dart';
@@ -35,8 +35,9 @@ class _NewAc extends State<NewAc> {
             Padding(
               padding: const EdgeInsets.only(
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
-              /*child:LabelElement(
-                labelText:'Crea qui il tuo account',
+              /* 
+                 * child:LabelElement(
+                 * labelText:'Crea qui il tuo account',
               )*/),
             Padding(
               padding: const EdgeInsets.only(
@@ -63,7 +64,7 @@ class _NewAc extends State<NewAc> {
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
                 obscureText:
-                    true, //rende non leggibile la password dopo aver scritto un carattere
+                    true, //* rende non leggibile la password dopo aver scritto un carattere
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
@@ -75,7 +76,7 @@ class _NewAc extends State<NewAc> {
                   left: 15.0, right: 15.0, top: 15, bottom: 30),
               child: TextField(
                 obscureText:
-                    true, //rende non leggibile la password dopo aver scritto un carattere
+                    true, //* rende non leggibile la password dopo aver scritto un carattere
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Conferma Password',

@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+//! ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:testvscode/LogIn.dart';
@@ -24,7 +24,7 @@ class _Sett extends State<Sett> {
             fontSize: 30,
           ),
         ),
-        //centerTitle: true, // per centrare titolo
+        //* centerTitle: true, // per centrare titolo
         backgroundColor: Color.fromARGB(255, 73, 22, 82),
       ),
       body: SingleChildScrollView(
@@ -33,7 +33,7 @@ class _Sett extends State<Sett> {
             Positioned(
               child: FlatButton(
                 onPressed: () {
-                  //evento quando si clicca 'account settings'
+                  //? evento quando si clicca 'account settings'
                 },
                 child: Text(
                   'Account settings',
@@ -41,13 +41,13 @@ class _Sett extends State<Sett> {
                 ),
               ),
             ),
-            //Divider(color: Colors.black), //crea una linea di divisione
+            //* Divider(color: Colors.black), //crea una linea di divisione
             //https://docs.flutter.dev/release/breaking-changes/buttons
             Positioned(
                 top: 40,
                 child: FlatButton(
                   onPressed: () {
-                    //evento quando si clicca 'tema'
+                    //? evento quando si clicca 'tema'
                   },
                   child: Text(
                     'Tema',
@@ -60,7 +60,7 @@ class _Sett extends State<Sett> {
                 top: 80,
                 child: FlatButton(
                   onPressed: () {
-                    //evento quando si clicca 'tema'
+                    //? evento quando si clicca 'tema'
                   },
                   child: Text(
                     'Note preferite',
@@ -73,7 +73,7 @@ class _Sett extends State<Sett> {
                 top: 120,
                 child: FlatButton(
                   onPressed: () {
-                    //evento quando si clicca 'tema'
+                    //? evento quando si clicca 'tema'
                   },
                   child: Text(
                     'Assistenza',
@@ -84,7 +84,7 @@ class _Sett extends State<Sett> {
                 top: 160,
                 child: FlatButton(
                   onPressed: () {
-                    //evento quando si clicca 'tema'
+                    //? evento quando si clicca 'tema'
                   },
                   child: Text(
                     'Visita il nostro sito',
@@ -95,7 +95,7 @@ class _Sett extends State<Sett> {
                 top: 200,
                 child: FlatButton(
                   onPressed: () {
-                    //evento quando si clicca 'tema'
+                    //? evento quando si clicca 'tema'
                   },
                   child: Text(
                     'Informazioni',
@@ -105,7 +105,7 @@ class _Sett extends State<Sett> {
             Positioned(
                 top: 240,
                 child: FlatButton(
-                  //togliere la freccia per non dare la possibilità all'utente di tornare indietro !!!
+                  //* togliere la freccia per non dare la possibilità all'utente di tornare indietro !!!
                   onPressed: () => {
                     Navigator.push(
                         context, MaterialPageRoute(builder: (_) => Login())),

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+//! ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'foglionote.dart';
@@ -14,10 +14,11 @@ class _NoteState extends State<Note> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: //AppBar(
-      //title: const Text('Notes'),
-      //backgroundColor: Color.fromARGB(255, 77, 236, 56),
-      //),
+      /*
+        * appBar: //AppBar(
+        * title: const Text('Notes'),
+        * backgroundColor: Color.fromARGB(255, 77, 236, 56),
+      ),*/
       body: Center(
           child: Stack(
         children: <Widget>[
@@ -26,9 +27,9 @@ class _NoteState extends State<Note> {
             bottom: 20,
             child: FloatingActionButton(
               backgroundColor: Color.fromARGB(255, 209, 56, 236),
-              //collegamento al foglio delle note
+              //* collegamento al foglio delle note
               onPressed: () =>{ Navigator.push(context, MaterialPageRoute(builder: (_) => Foglionote(context))),
-                }, //Foglionote(),
+                }, //* Foglionote(),
               child: Icon(Icons.plus_one_rounded),
             ),
           )

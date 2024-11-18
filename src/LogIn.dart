@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+//! ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -15,7 +15,7 @@ class Login extends StatefulWidget {
 class _Login extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    //double width = MediaQuery.of(context).size.width;
+    //! double width = MediaQuery.of(context).size.width;
     double height2 = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -40,7 +40,7 @@ class _Login extends State<Login> {
                 child: Container(
                   width: 150,
                   height: 150,
-                  //https://www.html.it/pag/379719/gestione-degli-assets-e-delle-immagini/
+                  //* https://www.html.it/pag/379719/gestione-degli-assets-e-delle-immagini/
                     alignment: Alignment.center,
                     child:
                      const Image(image: AssetImage('assets/img/1024.png')),
@@ -61,7 +61,7 @@ class _Login extends State<Login> {
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
                 obscureText:
-                    true, //rende non leggibile la password dopo aver scritto un carattere
+                    true, //* rende non leggibile la password dopo aver scritto un carattere
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
@@ -70,7 +70,7 @@ class _Login extends State<Login> {
             ),
             FlatButton(
               onPressed: () {
-                //evento quando si clicca 'forgot password'
+                //? evento quando si clicca 'forgot password'
               },
               child: Text(
                 'Forgot Password',
@@ -109,7 +109,7 @@ class _Login extends State<Login> {
             SizedBox(
               height: height2 - 580,
             ),
-            //collegamento alla pagina web di registrazion
+            //* collegamento alla pagina web di registrazion
             GestureDetector(
               child: Text("Accedi al nostro sito web",
                   style: TextStyle(
@@ -128,4 +128,4 @@ class _Login extends State<Login> {
 }
 
 
-//New User? Create Account
+//? New User? Create Account

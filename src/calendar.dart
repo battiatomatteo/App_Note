@@ -1,4 +1,5 @@
-// ignore_for_file: prefer_const_constructors, unused_label
+//! ignore_for_file: prefer_const_constructors, unused_label
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -28,7 +29,7 @@ class _HomeState extends State<Home> {
               style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w600,
-                  color: viola), // aggiunto senza beghins
+                  color: viola),
             ),
             SizedBox(
               height: 20,
@@ -36,8 +37,8 @@ class _HomeState extends State<Home> {
             ElevatedButton(
               onPressed: () => selectDate(context),
               style: ElevatedButton.styleFrom(
-                primary: viola, // Background color
-                onPrimary: Colors.black, // Text Color (Foreground color)
+                primary: viola, //* Background color
+                onPrimary: Colors.black, //* Text Color (Foreground color)
               ),
               child: const Text(
                 'Pick date',
@@ -64,9 +65,9 @@ class _HomeState extends State<Home> {
           return Theme(
             data: Theme.of(context).copyWith(
               colorScheme: ColorScheme.light(
-                primary: viola, //parte superiore
-                onPrimary: Colors.black, // testo parte superiore
-                onSurface: Colors.black, //numeri
+                primary: viola, //* parte superiore
+                onPrimary: Colors.black, //* testo parte superiore
+                onSurface: Colors.black, //* numeri
               ),
             ),
             child: child!,
