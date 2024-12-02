@@ -2,7 +2,7 @@
 body{
     background-color:rgba(79, 7, 94, 0.137);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    overflow:auto;
+    
 }
 
 body::-webkit-scrollbar {
@@ -23,6 +23,7 @@ h2 {
 .container {  /* da sistemare per essere sempre centrato */
     width: 50%;
     margin-left: 21%;
+    /*margin-right: 21%;*/
     margin-top: 70px;
     margin-bottom: 70px;
     padding: 50px;
@@ -40,7 +41,7 @@ h2 {
     box-shadow: -15px 16px 15px 0px rgb(47, 44, 44);
 }
 /*stile immagini che scorrono*/
-
+/*
 * {box-sizing: border-box;}
 
 .mySlides {text-align:center
@@ -50,13 +51,13 @@ h2 {
     
 }
 
-/* Slideshow container */
+ Slideshow container 
 .slideshow-container {
     max-width: 1000px;
     text-align: center;
 }
 
-/* The dots/bullets/indicators */
+ The dots/bullets/indicators 
 .dot {
     height: 15px;
     width: 15px;
@@ -71,7 +72,7 @@ h2 {
 background-color: #717171;
 }
 
-/* Fading animation */
+Fading animation 
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -90,6 +91,7 @@ background-color: #717171;
 }
 
 /* stile immagine principale */
+
 #header{
     position: relative;
     width: 100%;
