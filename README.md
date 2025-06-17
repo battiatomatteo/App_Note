@@ -1,10 +1,21 @@
 # App_Note
-App creation
 
-- Il fine di questa app è quello di creare note e promemoria, i dati dell'utente verranno salvati in un database mentre 
-le note ed i promemoria in un file .txt .
+## 📌 Descrizione
+Questa app è stata sviluppata per creare **note** e **promemoria**.  
+I dati dell'utente vengono salvati in un **database**, mentre le note e i promemoria vengono memorizzati in un **file `.txt`**.
 
-- Al momento è possibile nella cartella 'screen_app' sono presenti screen di ogni sezione presente nell'app.
-Finita la parte grafica, tra poco verrà aggiunta la parte del salvataggio dei dati.
+## 🎨 Stato Attuale
+- La parte **grafica** è completata.  
+- Nella cartella **`screen_app`** sono presenti screenshot di ogni sezione dell'app.  
+- Prossimamente verrà aggiunta la **gestione del salvataggio dei dati**.
 
-- Lo scopo della creazione di questo progetto è quello di apprendere attraverso la costruzione di un'app il linguaggio Dart.
+## 🎯 Obiettivo
+Questo progetto nasce con l'obiettivo di **imparare il linguaggio Dart** attraverso la realizzazione pratica di un'app.
+
+## 🔧 Linguaggi Utilizzati
+- **Dart**  
+- **HTML**  
+- **CSS**  
+- **JavaScript**  
+
+
